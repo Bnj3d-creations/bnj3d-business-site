@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: bnj3dcreations/busns_site_github_cms
+  repo: bnj3d-creations/bnj3d-business-site
   branch: main
 
 media_folder: "images"
