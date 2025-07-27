@@ -1,7 +1,13 @@
 backend:
   name: github
-  repo: bnj3d-creations/bnj3d-business-site
+  repo: Bnj3d-creations/bnj3d-business-site
   branch: main
+  auth_scope: repo
+  base_url: https://api.github.com
+  auth_endpoint: https://github.com/login/oauth/authorize
+  app_id: 0v231ip8TM2hWpMqJVoA
+  client_id: 0v231ip8TM2hWpMqJVoA
+  client_secret: f82561013dcce8f3bc88366e4d4d19b112276401
 
 media_folder: "images"
 public_folder: "/images"
