@@ -65,22 +65,6 @@
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
 
-  <script>
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const data = new FormData(form);
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data).toString()
-      })
-      .then(() => {
-        form.classList.add('hidden');
-        document.getElementById('thank-you-message').classList.remove('hidden');
-      })
-      .catch((error) => alert("There was a problem submitting the form: " + error));
-    });
-  </script>
+
 </body>
 </html>
