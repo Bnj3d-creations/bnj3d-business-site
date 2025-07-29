@@ -6,12 +6,34 @@
   <title>Contact – BnJ 3D Creations</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    .hidden { display: none; }
     .thank-you {
       background-color: #e0ffe0;
       padding: 1rem;
       border: 1px solid #0a0;
       margin-top: 1rem;
+    }
+    .form-wrapper {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 2em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: purple;
+      color: white;
+      border: none;
+      padding: 0.75em;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -25,6 +47,7 @@
       </div>
     </div>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -32,45 +55,33 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
-    <h2>Contact Us</h2>
+  <section class="form-wrapper">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">If you have a project in mind or want to learn more, drop us a message!</p>
+    <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+      <input type="hidden" name="form-name" value="contact" />
 
-    <section style="max-width: 600px; margin: 2em auto; padding: 2em; border: 1px solid #ccc; border-radius: 8px; background: #f9f9f9;">
-  <h2 style="text-align: center;">Contact Us</h2>
-  <p style="text-align: center;">If you have a project in mind or want to learn more, drop us a message!</p>
-  <form name="contact" method="POST" data-netlify="true" action="/thank-you" style="display: flex; flex-direction: column; gap: 1em;">
-    <input type="hidden" name="form-name" value="contact">
-    
-    <label>
-      Name:
-      <input type="text" name="name" required style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #ccc;" />
-    </label>
+      <label>
+        Name:<br>
+        <input type="text" name="name" required />
+      </label><br><br>
 
-    <label>
-      Email:
-      <input type="email" name="email" required style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #ccc;" />
-    </label>
+      <label>
+        Email:<br>
+        <input type="email" name="email" required />
+      </label><br><br>
 
-    <label>
-      Message:
-      <textarea name="message" required rows="5" style="width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #ccc;"></textarea>
-    </label>
+      <label>
+        Message:<br>
+        <textarea name="message" rows="5" required></textarea>
+      </label><br><br>
 
-    <button type="submit" style="background-color: purple; color: white; border: none; padding: 0.75em; border-radius: 4px; font-size: 1em; cursor: pointer;">
-      Send Message
-    </button>
-  </form>
-</section>
-
-    <div id="thank-you-message" class="thank-you hidden">
-      <h3>Thank you!</h3>
-      <p>Your message has been sent. We’ll be in touch soon.</p>
-    </div>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
