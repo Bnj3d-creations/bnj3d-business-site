@@ -5,82 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – BnJ 3D Creations</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    .thank-you {
-      background-color: #e0ffe0;
-      padding: 1rem;
-      border: 1px solid #0a0;
-      margin-top: 1rem;
-    }
-    .form-wrapper {
-      max-width: 600px;
-      margin: 2em auto;
-      padding: 2em;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #f9f9f9;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.5em;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: purple;
-      color: white;
-      border: none;
-      padding: 0.75em;
-      border-radius: 4px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
-      <img src="images/bnj-logo.png" alt="BnJ 3D Logo" style="height: 100px;" />
+      <img src="images/bnj-logo.png" alt="BnJ Logo" width="80" height="80">
       <div>
         <h1>BnJ 3D Creations</h1>
-        <p class="tagline">Making Your Ideas a Reality — in 3D</p>
+        <div class="tagline">Making Your Ideas a Reality — in 3D</div>
       </div>
     </div>
   </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <section class="form-wrapper">
-    <h2 style="text-align: center;">Contact Us</h2>
-    <p style="text-align: center;">If you have a project in mind or want to learn more, drop us a message!</p>
-    <form name="contact" method="POST" data-netlify="true" action="/thank-you">
-      <input type="hidden" name="form-name" value="contact" />
-
-      <label>
-        Name:<br>
-        <input type="text" name="name" required />
-      </label><br><br>
-
-      <label>
-        Email:<br>
-        <input type="email" name="email" required />
-      </label><br><br>
-
-      <label>
-        Message:<br>
+  <section>
+    <div class="form-wrapper" style="max-width: 500px; margin: auto;">
+      <h2>Contact Us</h2>
+      <p>If you have a project in mind or want to learn more, drop us a message!</p>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Message:</label>
         <textarea name="message" rows="5" required></textarea>
-      </label><br><br>
-      <button type="submit">Send Message</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
-
   <footer>
-    <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
+    &copy; 2025 BnJ 3D Creations. All rights reserved.
   </footer>
 </body>
 </html>
+
