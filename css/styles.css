@@ -1,128 +1,75 @@
 /* styles.css */
 
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: sans-serif;
-  background-color: #fff;
+  background: #fff;
   color: #333;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  max-width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
-
-header {
-  background-color: #5a2ca0;
+header.hero {
+  background: rebeccapurple;
   color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-radius: 0 0 16px 16px;
+  padding: 1em;
+  border-bottom: 10px solid gold;
 }
-
-header h1 {
-  font-size: 2.5rem;
+.branding {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+  margin-right: 1em;
+}
+.site-title h1 {
   margin: 0;
+  font-size: 1.75em;
 }
-
-header .tagline {
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
-  font-style: italic;
+.site-title p {
+  margin: 0;
+  font-size: 1em;
 }
-
-nav {
-  background-color: #f1c40f;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 0 0 16px 16px;
+.navbar {
+  margin-top: 0.5em;
 }
-
-nav a {
+.navbar a {
   color: black;
+  background: gold;
+  padding: 0.5em 1em;
+  margin: 0.25em;
   text-decoration: none;
+  border-radius: 0.25em;
   font-weight: bold;
-  margin: 0 1rem;
-  font-size: 1.1rem;
 }
-
-nav a:hover {
-  text-decoration: underline;
+main.content {
+  padding: 1em;
 }
-
-section {
-  padding: 2rem;
-}
-
-.project {
-  margin-bottom: 2rem;
-}
-
-.project h2 {
-  color: #5a2ca0;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.project p {
-  font-size: 1.1rem;
-}
-
 footer {
+  background: #eee;
   text-align: center;
-  padding: 2rem;
-  background-color: #eee;
-  font-size: 0.9rem;
-  color: #444;
-  border-radius: 16px 16px 0 0;
+  padding: 1em;
+  font-size: 0.85em;
 }
-/* === Mobile Optimizations === */
-@media (max-width: 600px) {
-  body {
-    padding: 0 1rem;
-  }
-
-  header img {
-    width: 60px;
-    height: auto;
-  }
-
-  .form-wrapper {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  input, textarea {
-    padding: 0.75rem;
-    font-size: 1rem;
-  }
-
-  button,
-  input[type="submit"] {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    display: block;
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.3em;
-  }
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 0.5em 0;
+}
+form input, form textarea {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+}
+form button {
+  background: rebeccapurple;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  font-size: 1em;
+  margin-top: 1em;
+  cursor: pointer;
 }
