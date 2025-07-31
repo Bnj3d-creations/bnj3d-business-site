@@ -1,10 +1,36 @@
-<!DOCTYPE html>
+E html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – BnJ 3D Creations</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .project-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+    .project-info {
+      padding: 1rem;
+    }
+    .project-info h3 {
+      margin-top: 0;
+      color: #5a2ca0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,10 +49,73 @@
     <a href="contact.html">Contact</a>
   </nav>
   <section>
-    <h2>Portfolio</h2>
-    <p>Explore some of our custom-designed 3D-printed products and special projects.</p>
+    <h2 style="text-align:center">Our Portfolio</h2>
+    <div class="gallery">
+
+      <div class="project-card">
+        <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
+        <div class="project-info">
+          <h3>Boeing 747 Interior Display</h3>
+          <p>Interior Designer Ordered for a Special Project. Challenging but fun to build, plus a great learning experience.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
+        <div class="project-info">
+          <h3>Dodecahedron Birdhouse</h3>
+          <p>Geometric birdhouse custom built for a backyard project. Unique and eye-catching.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/nfc-keychain.jpg" alt="NFC Tag Keychain">
+        <div class="project-info">
+          <h3>NFC Keychain</h3>
+          <p>Tap-to-open keychain that links directly to a business website. Designed for everyday use.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/window-feeder.jpg" alt="Window Bird Feeder">
+        <div class="project-info">
+          <h3>Window Bird Feeder</h3>
+          <p>No-tool installation using suction cups. Great for birdwatching from inside the house.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/usa-barn-feeder.jpg" alt="Patriotic Barn Feeder">
+        <div class="project-info">
+          <h3>USA Patriotic Barn Feeder</h3>
+          <p>Red, white, and blue barn-style feeder with "USA" embossed. Eye-catching and functional.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/two-tone-feeder.jpg" alt="Two-Tone Barn Feeder">
+        <div class="project-info">
+          <h3>Two-Tone Barn Roof Feeder</h3>
+          <p>Stylish and practical. Available in custom color options upon request.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/gold-wedding-decor.jpg" alt="Gold Wedding Decor">
+        <div class="project-info">
+          <h3>Wedding Decor – Gold PETG</h3>
+          <p>Custom wedding signage made from gold PETG. Max size up to 12" on large format printer.</p>
+        </div>
+      </div>
+
+    </div>
   </section>
   <footer>
+    <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
 </body>
