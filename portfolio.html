@@ -13,36 +13,17 @@
       padding: 2rem;
     }
     .project-card {
+      position: relative;
       background: #f9f9f9;
       border: 1px solid #ddd;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: relative;
-    }
-    .project-card .image-wrapper {
-      position: relative;
     }
     .project-card img {
       width: 100%;
       height: auto;
       display: block;
-    }
-    .branding-tag {
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
-      background-color: rgba(255, 255, 255, 0.7);
-      border-radius: 6px;
-      padding: 2px 6px;
-      font-size: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      font-weight: bold;
-    }
-    .branding-tag img {
-      height: 18px;
     }
     .project-info {
       padding: 1rem;
@@ -50,6 +31,22 @@
     .project-info h3 {
       margin-top: 0;
       color: #5a2ca0;
+    }
+    .branding-tag {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(255,255,255,0.85);
+      padding: 4px 6px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .branding-tag img {
+      height: 16px;
+      width: auto;
     }
   </style>
 </head>
@@ -74,9 +71,9 @@
     <div class="gallery">
 
       <div class="project-card">
-        <div class="image-wrapper">
-          <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
-          <div class="branding-tag"><img src="images/bnj-logo.png" alt="logo">BnJ 3D</div>
+        <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
+        <div class="branding-tag">
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D
         </div>
         <div class="project-info">
           <h3>Boeing 747 Interior Display</h3>
@@ -85,9 +82,9 @@
       </div>
 
       <div class="project-card">
-        <div class="image-wrapper">
-          <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
-          <div class="branding-tag"><img src="images/bnj-logo.png" alt="logo">BnJ 3D</div>
+        <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
+        <div class="branding-tag">
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D
         </div>
         <div class="project-info">
           <h3>Dodecahedron Birdhouse</h3>
@@ -96,9 +93,9 @@
       </div>
 
       <div class="project-card">
-        <div class="image-wrapper">
-          <img src="images/nfc-keychain.jpg" alt="NFC Tag Keychain">
-          <div class="branding-tag"><img src="images/bnj-logo.png" alt="logo">BnJ 3D</div>
+        <img src="images/nfc-keychain.jpg" alt="NFC Tag Keychain">
+        <div class="branding-tag">
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D
         </div>
         <div class="project-info">
           <h3>NFC Keychain</h3>
