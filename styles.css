@@ -71,3 +71,22 @@ form button {
   margin-top: 1em;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-flex h1 {
+    font-size: 1.5rem;
+    white-space: normal;      /* Allow wrapping if needed */
+    overflow: visible;        /* Prevent clipping */
+    max-width: 100%;          /* Allow it to use full width */
+  }
+
+  .logo {
+    max-width: 100px;         /* Resize logo slightly on mobile */
+    margin-bottom: 10px;
+  }
+}
