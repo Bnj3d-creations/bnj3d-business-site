@@ -6,6 +6,7 @@
   <title>Services – BnJ 3D Creations</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <style>
     .services-box {
       max-width: 800px;
@@ -74,7 +75,7 @@
       </div>
 
       <div class="service">
-        <h3><i class="fas fa-tools"></i>File Repair & Model Cleanup</h3>
+        <h3><i class="fas fa-screwdriver-wrench"></i>File Repair & Model Cleanup</h3>
         <p>Got a model that won’t slice or print correctly? I’ll fix it. Whether it’s holes, thin walls, or mesh errors, I can make it printable again.</p>
       </div>
 
@@ -107,6 +108,10 @@
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
 </body>
 </html>
-
