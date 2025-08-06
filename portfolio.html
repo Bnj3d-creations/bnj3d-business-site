@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio – BnJ 3D Creations</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <style>
     .gallery {
       display: grid;
@@ -24,6 +25,7 @@
       width: 100%;
       height: auto;
       display: block;
+      cursor: pointer;
     }
     .project-info {
       padding: 1rem;
@@ -36,23 +38,17 @@
       position: absolute;
       bottom: 8px;
       right: 8px;
-      background-color: rgba(255,255,255,0.9);
-      padding: 4px 8px;
+      background-color: rgba(255,255,255,0.85);
+      padding: 4px 6px;
       border-radius: 5px;
       font-size: 0.8rem;
       display: flex;
       align-items: center;
-      gap: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      gap: 4px;
     }
     .branding-tag img {
-      height: 18px;
+      height: 16px;
       width: auto;
-    }
-    .brand-text {
-      font-family: sans-serif;
-      color: #333;
-      white-space: nowrap;
     }
   </style>
 </head>
@@ -66,23 +62,22 @@
       </div>
     </div>
   </header>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
   </nav>
-
   <section>
     <h2 style="text-align:center">Our Portfolio</h2>
     <div class="gallery">
 
       <div class="project-card">
-        <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
+        <a href="images/747-model.jpg" class="glightbox">
+          <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Boeing 747 Interior Display</h3>
@@ -91,10 +86,11 @@
       </div>
 
       <div class="project-card">
-        <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
+        <a href="images/dodecahedron-birdhouse.jpg" class="glightbox">
+          <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Dodecahedron Birdhouse</h3>
@@ -103,10 +99,11 @@
       </div>
 
       <div class="project-card">
-        <img src="images/nfc-keychain.jpg" alt="NFC Tag Keychain">
+        <a href="images/nfc-keychain.jpg" class="glightbox">
+          <img src="images/nfc-keychain.jpg" alt="NFC Tag Keychain">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>NFC Keychain</h3>
@@ -115,10 +112,11 @@
       </div>
 
       <div class="project-card">
-        <img src="images/birdfeeder-purple-gold.jpg" alt="Two-Tone Barn Roof Feeder">
+        <a href="images/birdfeeder-purple-gold.jpg" class="glightbox">
+          <img src="images/birdfeeder-purple-gold.jpg" alt="Two-Tone Barn Roof Feeder">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Two-Tone Barn Roof Feeder</h3>
@@ -127,10 +125,11 @@
       </div>
 
       <div class="project-card">
-        <img src="images/birdfeeder-usa.jpg" alt="USA Patriotic Barn Feeder">
+        <a href="images/birdfeeder-usa.jpg" class="glightbox">
+          <img src="images/birdfeeder-usa.jpg" alt="USA Patriotic Barn Feeder">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>USA Patriotic Barn Feeder</h3>
@@ -139,10 +138,11 @@
       </div>
 
       <div class="project-card">
-        <img src="images/two-tone-feeder.jpg" alt="Window Bird Feeder">
+        <a href="images/two-tone-feeder.jpg" class="glightbox">
+          <img src="images/two-tone-feeder.jpg" alt="Window Bird Feeder">
+        </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ logo" />
-          <span class="brand-text">BnJ 3D Creations</span>
+          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Window Bird Feeder</h3>
@@ -152,14 +152,13 @@
 
     </div>
   </section>
-
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
-</body>
-</html>
 
-    <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
 </body>
 </html>
