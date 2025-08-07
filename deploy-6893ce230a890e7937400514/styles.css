@@ -1,0 +1,94 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+header.hero {
+  background: rebeccapurple;
+  color: white;
+  padding: 1em;
+  border-bottom: 10px solid gold;
+}
+.branding {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+  margin-right: 1em;
+}
+.site-title h1 {
+  margin: 0;
+  font-size: 1.75em;
+}
+.site-title p {
+  margin: 0;
+  font-size: 1em;
+}
+.navbar {
+  margin-top: 0.5em;
+}
+.navbar a {
+  color: black;
+  background: gold;
+  padding: 0.5em 1em;
+  margin: 0.25em;
+  text-decoration: none;
+  border-radius: 0.25em;
+  font-weight: bold;
+}
+main.content {
+  padding: 1em;
+}
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.85em;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin: 0.5em 0;
+}
+form input, form textarea {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+}
+form button {
+  background: rebeccapurple;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  font-size: 1em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+ .header-flex h1 {
+  font-size: 2rem;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  display: inline-block;
+  max-width: 100%;
+}
+
+  .logo {
+    max-width: 100px;         /* Resize logo slightly on mobile */
+    margin-bottom: 10px;
+  }
+}
