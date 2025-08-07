@@ -206,3 +206,12 @@ footer {
 .service-card ul.material-list li {
   margin-bottom: 0.4rem;
 }
+/* === Services Box Style === */
+.services-box {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
