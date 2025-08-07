@@ -3,38 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home – Custom 3D Printing | BnJ 3D Creations</title>
-  <meta name="description" content="BnJ 3D Creations specializes in custom 3D-printed parts, precision modeling, and one-of-a-kind functional designs." />
-  <meta property="og:title" content="Home – Custom 3D Printing | BnJ 3D Creations" />
-  <meta property="og:description" content="Explore the possibilities of custom prints and precision CAD designs with BnJ 3D Creations." />
-  <meta property="og:image" content="https://bnj3d-creations.com/images/3d-printing-icon.png" />
-  <meta property="og:url" content="https://bnj3d-creations.com/index.html" />
+  <title>BnJ 3D Creations – Custom 3D Printing Services</title>
+  <meta name="description" content="BnJ 3D Creations offers precision 3D printing services, custom CAD design, repairs, and unique projects. Run by Bill Witmer, a retired machinist with decades of experience." />
+  <meta property="og:title" content="BnJ 3D Creations – Custom 3D Printing Services" />
+  <meta property="og:description" content="Explore 3D printing services and personal projects by Bill Witmer at BnJ 3D Creations. From custom gifts to functional prototypes – bring your ideas to life." />
+  <meta property="og:image" content="https://bnj3d-creations.com/images/bnj-logo.png" />
+  <meta property="og:url" content="https://bnj3d-creations.com/" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .intro {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .intro img {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .intro-text {
+      flex: 1 1 300px;
+    }
+    .cta-button {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background-color: #5a2ca0;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta-button:hover {
+      background-color: #4a238a;
+    }
+  </style>
 </head>
 <body>
-  <header class="banner">
-    <div class="container">
-      <img src="images/bnj-logo.png" alt="BnJ 3D Creations Logo" class="logo" />
-      <h1>BnJ 3D Creations</h1>
-      <p>Making Your Ideas a Reality — in 3D</p>
+  <header>
+    <div class="header-flex">
+      <img src="images/bnj-logo.png" alt="BnJ 3D Logo" class="logo" />
+      <div>
+        <h1>BnJ 3D Creations</h1>
+        <p class="tagline">Making Your Ideas a Reality — in 3D</p>
+      </div>
     </div>
   </header>
-  <nav class="navbar">
+
+  <nav>
     <a href="index.html" class="active">Home</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <main class="content">
-    <h2 style="color: #5e2ca5; text-align: center;">Welcome to BnJ 3D Creations</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto;">
-      Whether you're looking for custom 3D-printed parts, precision CAD modeling, or one-of-a-kind designs, BnJ 3D Creations brings your vision to life. With years of experience and a full suite of 3D filament printers, we provide dependable, made-to-order results.
-    </p>
 
-    <div class="cta-button" style="text-align: center; margin-top: 2em;">
-      <a href="services.html" class="button">Explore Our Services</a>
-    </div>
+  <main>
+    <section class="intro">
+      <img src="images/Bill Witmer Profile.jpg" alt="Bill Witmer, Founder" />
+      <div class="intro-text">
+        <h2>Welcome to BnJ 3D Creations</h2>
+        <p>Hi, I'm Bill Witmer — Retired machinist turned 3D printing enthusiast. After 50 years of precision manufacturing and project management, I started BnJ 3D Creations to keep the gears turning and bring ideas to life through custom design and printing services. Whether you need a prototype, a personalized gift, or a challenging custom project — I’ve got you covered.</p>
+        <a href="portfolio.html" class="cta-button">View My Work</a>
+      </div>
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
