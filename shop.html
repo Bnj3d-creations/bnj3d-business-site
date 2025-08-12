@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop – BnJ 3D Creations</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Bird feeders, articulated fidgets, décor, and specialty 3D prints by BnJ 3D Creations." />
+</head>
+<body>
+  <header>
+    <div class="header-flex">
+      <img src="images/bnj-logo.png" alt="BnJ 3D Logo" class="logo" />
+      <div>
+        <h1>BnJ 3D Creations</h1>
+        <p class="tagline">Making Your Ideas a Reality — in 3D</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a class="active" href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section class="shop-hero">
+      <h2>Shop</h2>
+      <p>Bird feeders, articulated fidgets, décor, and specialty items — printed to order with care.</p>
+
+      <div class="shop-filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="bird">Bird Feeders</button>
+        <button class="chip" data-filter="fidget">Articulated Fidgets</button>
+        <button class="chip" data-filter="decor">Décor</button>
+        <button class="chip" data-filter="specialty">Specialty</button>
+      </div>
+    </section>
+
+    <section class="product-grid">
+      <!-- Bird Feeder -->
+      <article class="product-card" data-cat="bird">
+        <a href="product-birdfeeder-cedar.html" class="product-link">
+          <img src="images/shop/birdfeeder-cedar.jpg" alt="Cedar Roof Bird Feeder" />
+          <div class="product-body">
+            <h3>Cedar Roof Bird Feeder</h3>
+            <p>Weather-friendly design with easy-fill tray.</p>
+            <div class="product-foot">
+              <span class="price">$28</span>
+              <span class="cta">View Details →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Articulated Fidget -->
+      <article class="product-card" data-cat="fidget">
+        <a href="product-fidget-snail.html" class="product-link">
+          <img src="images/shop/articulated-snail.jpg" alt="Articulated Snail Fidget" />
+          <div class="product-body">
+            <h3>Articulated Snail Fidget</h3>
+            <p>No assembly; smooth segments; desk-safe.</p>
+            <div class="product-foot">
+              <span class="price">$12</span>
+              <span class="cta">View Details →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Décor -->
+      <article class="product-card" data-cat="decor">
+        <a href="product-decor-nameplate.html" class="product-link">
+          <img src="images/shop/desk-nameplate.jpg" alt="Custom Desk Nameplate" />
+          <div class="product-body">
+            <h3>Custom Desk Nameplate</h3>
+            <p>Personalize text, color, and base style.</p>
+            <div class="product-foot">
+              <span class="price">$20</span>
+              <span class="cta">View Details →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Specialty -->
+      <article class="product-card" data-cat="specialty">
+        <a href="product-specialty-jet.html" class="product-link">
+          <img src="images/shop/747-jet.jpg" alt="747 Display Model" />
+          <div class="product-body">
+            <h3>747 Display Model</h3>
+            <p>Crisp lines; great for office or shelf.</p>
+            <div class="product-foot">
+              <span class="price">$45</span>
+              <span class="cta">View Details →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <p class="note-shipping">Prices shown are estimates. Final price depends on size, material, and finish. Message me on the product page to confirm.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple category filter (no framework)
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.product-card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const f = chip.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
