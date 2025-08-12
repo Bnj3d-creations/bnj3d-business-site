@@ -206,3 +206,47 @@ footer {
 .service-card ul.material-list li {
   margin-bottom: 0.4rem;
 }
+/* --- Shop / product styles --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+
+.shop-hero { text-align: center; margin-bottom: 1rem; }
+.shop-hero h2 { margin: 0 0 .25rem; }
+
+.shop-filters { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin: .75rem 0 1.25rem; }
+.chip { border: 1px solid #ddd; background: #fff; padding: .4rem .75rem; border-radius: 999px; cursor: pointer; }
+.chip.active { background: #5a2ca0; color: #fff; border-color: transparent; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.product-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: transform .15s ease; }
+.product-card:hover { transform: translateY(-2px); }
+.product-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.product-link { text-decoration: none; color: inherit; }
+.product-body { padding: .9rem; }
+.product-body h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.product-foot { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; }
+.price { font-weight: 700; color: #5a2ca0; }
+.cta { font-weight: 600; font-size: .9rem; }
+
+.note-shipping { text-align: center; color: #666; margin-top: 1rem; }
+
+/* Product page layout */
+.product-page .backlink { display: inline-block; margin: .25rem 0 1rem; text-decoration: none; }
+.product-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: start; }
+.product-gallery img { width: 100%; border-radius: 12px; margin-bottom: .75rem; border: 1px solid #eee; }
+.product-info h2 { margin-top: 0; }
+.product-price { font-weight: 700; color: #5a2ca0; margin: .25rem 0 1rem; }
+.bullet { padding-left: 1.1rem; }
+.bullet li { margin: .25rem 0; }
+
+.button { display: inline-block; padding: .65rem 1rem; border-radius: 10px; text-decoration: none; }
+.button.primary { background: #5a2ca0; color: #fff; }
+.button.ghost { border: 1px solid #ccc; color: #333; background: #fff; }
+
+@media (max-width: 900px) {
+  .product-detail { grid-template-columns: 1fr; }
+}
