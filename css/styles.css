@@ -250,3 +250,11 @@ footer {
 @media (max-width: 900px) {
   .product-detail { grid-template-columns: 1fr; }
 }
+/* === Unified price styling (overrides earlier rules) === */
+.price,
+.product-price {
+  font-weight: 700;
+  color: #5a2ca0;
+  font-size: 1.12em;   /* slightly larger so prices pop */
+  margin: .25rem 0 1rem;
+}
