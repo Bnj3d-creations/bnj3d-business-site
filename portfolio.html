@@ -3,14 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Portfolio – Custom 3D Work | BnJ 3D Creations</title>
+  <title>Portfolio – Custom 3D Work | BnJ 3D Creations</title>
   <meta name="description" content="See BnJ 3D Creations' past work — bird feeders, custom charms, large displays, and functional prints, all designed with precision." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.bnj3d-creations.com/portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="Portfolio – Custom 3D Work | BnJ 3D Creations" />
   <meta property="og:description" content="Browse the BnJ 3D Creations portfolio of handcrafted projects: feeders, charms, and more. High-quality, custom 3D printing." />
-  <meta property="og:image" content="https://bnj3d-creations.com/images/747-model.jpg" />
-  <meta property="og:url" content="https://bnj3d-creations.com/portfolio.html" />
+  <meta property="og:image" content="https://www.bnj3d-creations.com/images/747-model.jpg" />
+  <meta property="og:url" content="https://www.bnj3d-creations.com/portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio – Custom 3D Work | BnJ 3D Creations" />
+  <meta name="twitter:description" content="Browse the BnJ 3D Creations portfolio of handcrafted projects: feeders, charms, and more. High-quality, custom 3D printing." />
+  <meta name="twitter:image" content="https://www.bnj3d-creations.com/images/747-model.jpg" />
+
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
   <style>
     .gallery {
       display: grid;
@@ -56,6 +70,25 @@
       width: auto;
     }
   </style>
+
+  <!-- Portfolio schema (ItemList) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"BnJ 3D Creations Portfolio",
+    "itemListElement":[
+      {"@type":"CreativeWork","position":1,"name":"Boeing 747 Interior Display","image":"https://www.bnj3d-creations.com/images/747-model.jpg","url":"https://www.bnj3d-creations.com/747-display-model"},
+      {"@type":"CreativeWork","position":2,"name":"Dodecahedron Birdhouse","image":"https://www.bnj3d-creations.com/images/dodecahedron-birdhouse.jpg","url":"https://www.bnj3d-creations.com/portfolio"},
+      {"@type":"CreativeWork","position":3,"name":"Coaster Set (4) + Holder","image":"https://www.bnj3d-creations.com/images/coasters-set.jpg","url":"https://www.bnj3d-creations.com/product-coasters-holder"},
+      {"@type":"CreativeWork","position":4,"name":"NFC Key Fob","image":"https://www.bnj3d-creations.com/images/nfc-key-fob.jpg","url":"https://www.bnj3d-creations.com/product-nfc-key-fob"},
+      {"@type":"CreativeWork","position":5,"name":"Purple & Gold Bird Feeder","image":"https://www.bnj3d-creations.com/images/birdfeeder-purple-gold.jpg","url":"https://www.bnj3d-creations.com/purple-gold-feeder"},
+      {"@type":"CreativeWork","position":6,"name":"USA Patriotic Barn Feeder","image":"https://www.bnj3d-creations.com/images/birdfeeder-usa.jpg","url":"https://www.bnj3d-creations.com/usa-bird-feeder"},
+      {"@type":"CreativeWork","position":7,"name":"Window Bird Feeder (Two-Tone)","image":"https://www.bnj3d-creations.com/images/two-tone-feeder.jpg","url":"https://www.bnj3d-creations.com/two-tone-bird-feeder"},
+      {"@type":"CreativeWork","position":8,"name":"Gold Wedding Décor","image":"https://www.bnj3d-creations.com/images/gold-wedding-decor.jpg","url":"https://www.bnj3d-creations.com/gold-wedding-decor"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -67,121 +100,126 @@
       </div>
     </div>
   </header>
+
   <nav>
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="shop.html">Shop</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <section>
     <h2 style="text-align:center">Our Portfolio</h2>
     <div class="gallery">
 
       <div class="project-card">
         <a href="images/747-model.jpg" class="glightbox">
-          <img src="images/747-model.jpg" alt="Custom Boeing 747 Interior Decor">
+          <img src="images/747-model.jpg" alt="Custom Boeing 747 interior display model" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Boeing 747 Interior Display</h3>
-          <p>Interior Designer Ordered for a Special Project. Challenging but fun to build, plus a great learning experience.</p>
+          <p>Interior designer order for a special project — challenging, fun, and a great learning experience.</p>
         </div>
       </div>
 
       <div class="project-card">
         <a href="images/dodecahedron-birdhouse.jpg" class="glightbox">
-          <img src="images/dodecahedron-birdhouse.jpg" alt="Dodecahedron Birdhouse">
+          <img src="images/dodecahedron-birdhouse.jpg" alt="Geometric dodecahedron birdhouse" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Dodecahedron Birdhouse</h3>
-          <p>Geometric birdhouse custom built for a backyard project. Unique and eye-catching.</p>
+          <p>Geometric birdhouse custom-built for a backyard project — unique and eye-catching.</p>
         </div>
       </div>
-     
+
       <div class="project-card">
         <a href="images/coasters-set.jpg" class="glightbox">
-          <img src="images/coasters-set.jpg" alt="Coaster Set">
+          <img src="images/coasters-set.jpg" alt="Coaster set with holder and cork bottoms" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Coaster Set</h3>
-          <p>Coaster set, Cork Disc Bottoms help keep your tabletop and other furniture stain-free from watermarks. Designed for everyday use.</p>
+          <p>Cork discs keep furniture free of watermarks — designed for everyday use.</p>
         </div>
       </div>
-      
+
       <div class="project-card">
         <a href="images/nfc-key-fob.jpg" class="glightbox">
-          <img src="images/nfc-key-fob.jpg" alt="NFC Tag Keychain">
+          <img src="images/nfc-key-fob.jpg" alt="NFC key fob tag" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>NFC Key Fob</h3>
-          <p>Tap-to-open keychain that links directly to a business website. Designed for everyday use.</p>
+          <p>Tap-to-open keychain that links directly to a website or contact card.</p>
         </div>
       </div>
 
       <div class="project-card">
         <a href="images/birdfeeder-purple-gold.jpg" class="glightbox">
-          <img src="images/birdfeeder-purple-gold.jpg" alt="Two-Tone Barn Roof Feeder">
+          <img src="images/birdfeeder-purple-gold.jpg" alt="Purple and gold barn-roof bird feeder" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
-          <h3>Two-Tone Barn Roof Feeder</h3>
-          <p>Stylish and practical. Available in custom color combos with suction-cup mounting.</p>
+          <h3>Purple & Gold Bird Feeder</h3>
+          <p>Stylish, weather-friendly PETG with suction-cup mounting. Custom color combos available.</p>
         </div>
       </div>
 
       <div class="project-card">
         <a href="images/birdfeeder-usa.jpg" class="glightbox">
-          <img src="images/birdfeeder-usa.jpg" alt="USA Patriotic Barn Feeder">
+          <img src="images/birdfeeder-usa.jpg" alt="USA red, white, and blue barn-roof feeder" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>USA Patriotic Barn Feeder</h3>
-          <p>Red, white, and blue barn-style feeder. Great for patriotic yard displays or gifts.</p>
+          <p>Red, white & blue barn-style feeder — perfect for patriotic gifts.</p>
         </div>
       </div>
 
       <div class="project-card">
         <a href="images/two-tone-feeder.jpg" class="glightbox">
-          <img src="images/two-tone-feeder.jpg" alt="Window Bird Feeder">
+          <img src="images/two-tone-feeder.jpg" alt="Two-tone window bird feeder" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Window Bird Feeder</h3>
-          <p>No-tool installation using suction cups. Great for birdwatching from inside the house.</p>
+          <p>No-tool installation with suction cups — great for birdwatching from indoors.</p>
         </div>
       </div>
- <div class="project-card">
+
+      <div class="project-card">
         <a href="images/gold-wedding-decor.jpg" class="glightbox">
-          <img src="images/gold-wedding-decor.jpg" alt="Gold Wedding Couples Initial Interior Decor">
+          <img src="images/gold-wedding-decor.jpg" alt="Gold wedding couples initial display" loading="lazy" decoding="async" width="1200" height="900" />
         </a>
         <div class="branding-tag">
-          <img src="images/bnj-logo.png" alt="BnJ">BnJ 3D Creations
+          <img src="images/bnj-logo.png" alt="BnJ logo" />BnJ 3D Creations
         </div>
         <div class="project-info">
           <h3>Gold Wedding Couples Initial Display</h3>
-          <p>A Proud Mother Ordered for Her Daughter Large Gold Colored Initials of Bride and Groom. A fun Design Project plus the Glow on the mothers face was priceless.</p>
+          <p>Large satin-gold initials for a wedding table — a fun design project with a happy client.</p>
         </div>
       </div>
+
     </div>
   </section>
+
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
