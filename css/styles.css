@@ -258,3 +258,23 @@ footer {
   font-size: 1.12em;   /* slightly larger so prices pop */
   margin: .25rem 0 1rem;
 }
+/* Ensure services lay out in a responsive grid */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Make the printing card span the full row on tablets/desktops */
+@media (min-width: 768px) {
+  .service-card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Let the video fill the wider card */
+.service-card--wide video {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
