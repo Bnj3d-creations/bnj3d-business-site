@@ -278,3 +278,10 @@ footer {
   height: auto;
   max-height: none;
 }
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
