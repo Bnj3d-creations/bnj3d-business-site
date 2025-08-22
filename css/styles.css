@@ -285,3 +285,21 @@ footer {
   aspect-ratio: 1 / 1;
   display: block;
 }
+/* --- Gutter wedges: bottom gallery sizing --- */
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.gallery-grid img{
+  width: 100%;
+  height: 240px;           /* keeps a consistent tile height */
+  object-fit: cover;       /* crops edges instead of squishing */
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,.08);
+}
+@media (min-width: 900px){
+  .gallery-grid img{ height: 280px; }
+}
