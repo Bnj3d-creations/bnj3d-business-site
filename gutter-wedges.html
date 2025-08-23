@@ -2,91 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom Gutter Wedges – BnJ 3D Creations</title>
-  <meta name="description" content="Custom gutter wedges designed and manufactured exclusively for Ascension Gutters & More, LLC. Multiple sizes and options available." />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.bnj3d-creations.com/gutter-wedges" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Custom Gutter Wedges – BnJ 3D Creations" />
-  <meta property="og:description" content="Precision gutter wedges manufactured exclusively for Ascension Gutters & More, LLC. Sizes: 3\", 3.5\", 4\", 4\" 22.5°, 4\" bracket w/5.5\" radius, 4.5\"." />
-  <meta property="og:url" content="https://www.bnj3d-creations.com/gutter-wedges" />
-  <meta property="og:image" content="https://www.bnj3d-creations.com/images/gutter-wedge-hero.jpg" />
-
-  <!-- Site CSS -->
+  <meta name="description" content="Exclusive custom gutter wedges designed and manufactured for Ascension Gutters & More, LLC. Available in multiple sizes for precision installation." />
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Page-specific minimal CSS -->
   <style>
-    .hero {
+    /* Hover zoom for gallery */
+    .gallery-zoom {
       position: relative;
-      display: grid;
-      place-items: center;
-      padding: 5rem 1rem;
-      color: #fff;
-      text-align: center;
-      background: #333 url('images/gutter-wedge-hero.jpg') center/cover no-repeat;
+      overflow: hidden;
+      border-radius: 8px;
     }
-    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,.35); }
-    .hero > * { position: relative; z-index: 1; }
-    .hero h2 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); margin: 0 0 .5rem; }
-    .hero p { max-width: 800px; margin: 0 auto 1rem; }
-
-    .section { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-    .callout {
-      background: #faf7ff;
-      border: 1px solid #e7ddff;
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      color: #4b2ca3;
+    .gallery-zoom img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+    .gallery-zoom:hover img,
+    .gallery-zoom:focus-within img {
+      transform: scale(1.15);
     }
 
+    /* Grid for gallery */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-    }
-    .wedge-card {
-      background: #fff;
-      border: 1px solid #e6e6e6;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-      display: flex;
-      flex-direction: column;
-    }
-    .wedge-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .wedge-body {
-      padding: 0.9rem 1rem 1rem;
-    }
-    .wedge-body h3 {
-      margin: 0 0 .35rem;
-      color: #5a2ca0;
-      font-size: 1.1rem;
-    }
-    .wedge-body p {
-      margin: 0;
-      color: #444;
-      font-size: .96rem;
-      line-height: 1.4;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
-    .legal { font-size: .95rem; color: #555; margin-top: 1rem; }
-    .cta-row { text-align: center; margin-top: 1.25rem; }
-    .button.primary { display: inline-block; }
+    /* Hero */
+    .hero {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: .5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Product grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .card-body h3 {
+      margin: 0 0 .5rem;
+      font-size: 1.1rem;
+      color: #5a2ca0;
+    }
+    .card-body p {
+      margin: 0;
+      color: #444;
+      font-size: .9rem;
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <div class="header-flex">
       <img src="images/bnj-logo.png" alt="BnJ 3D Logo" class="logo" />
@@ -97,141 +95,90 @@
     </div>
   </header>
 
-  <!-- Nav -->
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="shop.html">Shop</a>
+    <a href="gutter-wedges.html" class="active">Gutter Wedges</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <h2>Custom Gutter Wedges</h2>
-      <p>Designed and manufactured exclusively for <strong>Ascension Gutters &amp; More, LLC</strong> to deliver reliable fit and long-term durability across multiple install scenarios.</p>
-      <div class="cta-row">
-        <a class="button primary" href="contact.html">Contact Me About Wedges</a>
-      </div>
-    </div>
+    <h1>Custom Gutter Wedges</h1>
+    <p>Designed and manufactured exclusively for Ascension Gutters & More, LLC</p>
   </section>
 
-  <main>
-    <!-- Overview -->
-    <section class="section">
-      <div class="callout">
-        <strong>About this project:</strong> These wedges were developed in close collaboration with Ascension Gutters &amp; More to solve specific installation challenges while keeping the workflow simple and consistent.
+  <main class="container">
+    <h2>Available Sizes & Options</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/gutter-wedge-3in.jpg" alt="3 inch wedge" />
+        <div class="card-body">
+          <h3>3" Wedge</h3>
+          <p>Compact fit for tighter runs and soffit constraints.</p>
+        </div>
       </div>
-    </section>
+      <div class="card">
+        <img src="images/gutter-wedge-3-5in.jpg" alt="3.5 inch wedge" />
+        <div class="card-body">
+          <h3>3.5" Wedge</h3>
+          <p>Balanced height for common installs; keeps a clean line.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/gutter-wedge-4in.jpg" alt="4 inch wedge" />
+        <div class="card-body">
+          <h3>4" Wedge</h3>
+          <p>Standard clearance option. Helps maintain pitch on longer runs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/gutter-wedge-4-22-5.jpg" alt="4 inch wedge 22.5 degrees" />
+        <div class="card-body">
+          <h3>4" Wedge — 22.5°</h3>
+          <p>Angled variant for transitions or specialty fascia needs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/gutter-wedge-bracket.jpg" alt="4 inch bracket with radius" />
+        <div class="card-body">
+          <h3>4" Bracket (5.5" Radius)</h3>
+          <p>Curved support for radius sections. Adds stability.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/gutter-wedge-4-5in.jpg" alt="4.5 inch wedge" />
+        <div class="card-body">
+          <h3>4.5" Wedge</h3>
+          <p>Extra lift for challenging pitches or uneven fascia.</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- Wedge Cards with Images + Descriptions -->
+    <p style="margin-top:1.5rem;font-size:.9rem;color:#555;">
+      Manufactured exclusively for Ascension Gutters & More, LLC under a commercial license.
+      <strong>Unauthorized reproduction prohibited.</strong>
+    </p>
+
+    <!-- Project Gallery -->
     <section class="section">
-      <h3>Available Sizes & Options</h3>
+      <h3>Project Gallery</h3>
       <div class="gallery-grid">
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-3in.jpg" alt="3 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>3&quot; Wedge</h3>
-            <p>Compact lift for tighter runs and soffit constraints. A solid choice when clearance is limited.</p>
-          </div>
+        <div class="gallery-zoom">
+          <img src="images/gutter-wedge-1.jpg" alt="Gutter wedge closeup" loading="lazy" decoding="async">
         </div>
-
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-3-5in.jpg" alt="3.5 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>3.5&quot; Wedge</h3>
-            <p>Balanced height for common installations. Keeps a clean line while improving water flow angle.</p>
-          </div>
+        <div class="gallery-zoom">
+          <img src="images/gutter-wedge-2.jpg" alt="Set of gutter wedges in multiple sizes" loading="lazy" decoding="async">
         </div>
-
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-4in.jpg" alt="4 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Wedge</h3>
-            <p>Standard option when extra clearance is needed. Helps maintain pitch on longer runs.</p>
-          </div>
+        <div class="gallery-zoom">
+          <img src="images/gutter-wedge-3.jpg" alt="Installed gutter wedge example" loading="lazy" decoding="async">
         </div>
-
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-4in-22deg.jpg" alt="4 inch 22.5 degree gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Wedge — 22.5°</h3>
-            <p>Angled variant for transitions and specialty tie-ins where a fixed degree improves alignment.</p>
-          </div>
-        </div>
-
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-4in-bracket-5-5radius.jpg" alt="4 inch gutter bracket with 5.5 inch radius" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Bracket (5.5&quot; Radius)</h3>
-            <p>Curved support for radius sections. Adds stability without compromising the contour.</p>
-          </div>
-        </div>
-
-        <div class="wedge-card">
-          <img src="images/gutter-wedge-4-5in.jpg" alt="4.5 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4.5&quot; Wedge</h3>
-            <p>Extra lift for challenging pitches or uneven fascia. Useful where added angle is essential.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="legal">Manufactured exclusively for Ascension Gutters &amp; More, LLC under a commercial license. <em>Unauthorized reproduction prohibited.</em></p>
-      <div class="cta-row">
-        <a class="button primary" href="contact.html">Request This Project</a>
-        <a class="button ghost" href="services.html" style="margin-left:.5rem;">See More Services</a>
       </div>
     </section>
-
-    <!-- Optional Gallery (leave or remove) -->
-  <!-- Optional Gallery (leave or remove) -->
-<section class="section">
-  <h3>Project Gallery</h3>
-
-  <div class="gallery-grid">
-    <img src="images/gutter-wedge-1.jpg"
-         alt="Gutter wedge closeup" loading="lazy" decoding="async" />
-
-    <img src="images/gutter-wedge-2.jpg"
-         alt="Set of gutter wedges in multiple sizes" loading="lazy" decoding="async" />
-
-    <!-- You can add this when you have it -->
-    <img src="images/gutter-wedge-3 installed.jpg"
-         alt="Installed gutter wedge example" loading="lazy" decoding="async" />
-  </div>
-
-  <p style="color:#666; margin-top:.5rem;">
-    Swap these placeholders with your own photos anytime.
-  </p>
-</section>
-  <style>
-  /* --- Gutter Wedges: bottom gallery sizing --- */
-  .gallery-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap:16px;
-    align-items:start;
-  }
-  .gallery-grid img{
-    width:100%;
-    height:220px;            /* controls thumbnail height */
-    object-fit:cover;        /* crops to fit nicely */
-    border-radius:8px;
-    display:block;           /* prevents inline gaps */
-  }
-  @media (min-width: 900px){
-    .gallery-grid img{ height:260px; }
-  }
-</style>  
   </main>
 
-  <footer>
-    <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
-  </footer>
-</body>
-</html>
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
