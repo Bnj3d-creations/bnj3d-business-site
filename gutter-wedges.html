@@ -20,7 +20,7 @@
   <!-- Site CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Page-specific CSS (includes hover-zoom) -->
+  <!-- Page-specific CSS -->
   <style>
     /* Hero */
     .hero {
@@ -37,7 +37,6 @@
     .hero h2 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); margin: 0 0 .5rem; }
     .hero p { max-width: 800px; margin: 0 auto 1rem; }
 
-    /* Layout helpers */
     .section { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
     .callout {
       background: #faf7ff;
@@ -47,7 +46,6 @@
       color: #4b2ca3;
     }
 
-    /* Grid of wedge cards */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -58,7 +56,7 @@
       background: #fff;
       border: 1px solid #e6e6e6;
       border-radius: 12px;
-      overflow: hidden;             /* keeps zoomed image clipped */
+      overflow: hidden;
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
@@ -67,13 +65,7 @@
       display: block;
       width: 100%;
       height: auto;
-      transform-origin: center center;
-      transition: transform .25s ease, box-shadow .25s ease;
-      will-change: transform;
-    }
-    /* Zoom on the whole card (easier to hit target, image stays clipped) */
-    .wedge-card:hover img {
-      transform: scale(1.06);
+      cursor: pointer;
     }
     .wedge-body { padding: 0.9rem 1rem 1rem; }
     .wedge-body h3 { margin: 0 0 .35rem; color: #5a2ca0; font-size: 1.1rem; }
@@ -83,8 +75,6 @@
     .cta-row { text-align: center; margin-top: 1.25rem; }
     .button.primary { display: inline-block; }
 
-    /* ---------- Hover zoom for the bottom Project Gallery ---------- */
-    /* scoped to this page via .wedges-page so other pages aren't affected */
     .wedges-page .project-gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -96,29 +86,33 @@
       width: 100%;
       height: auto;
       border-radius: 12px;
-      transform-origin: center center;
-      transition: transform .25s ease, box-shadow .25s ease;
-      will-change: transform;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    }
-    .wedges-page .project-gallery-grid img:hover {
-      transform: scale(1.06);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-      z-index: 1;
+      cursor: pointer;
     }
 
-    /* Respect accessibility + smaller screens */
-    @media (max-width: 640px) {
-      .wedge-card:hover img,
-      .wedges-page .project-gallery-grid img:hover { transform: scale(1.03); }
+    /* Lightbox overlay */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
     }
-    @media (prefers-reduced-motion: reduce) {
-      .wedge-card img,
-      .wedges-page .project-gallery-grid img { transition: none !important; }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
-
-    /* Opt-out utility for any image */
-    .no-zoom:hover { transform: none !important; box-shadow: none !important; }
+    .lightbox.active {
+      display: flex;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -153,7 +147,6 @@
     </div>
   </section>
 
-  <!-- Note the page scope class here -->
   <main class="wedges-page">
     <!-- Overview -->
     <section class="section">
@@ -162,63 +155,39 @@
       </div>
     </section>
 
-    <!-- Wedge Cards with Images + Descriptions -->
+    <!-- Wedge Cards -->
     <section class="section">
       <h3>Available Sizes &amp; Options</h3>
       <div class="gallery-grid">
         <div class="wedge-card">
-          <img src="images/gutter-wedge-3in.jpg" alt="3 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>3&quot; Wedge</h3>
-            <p>Compact lift for tighter runs and soffit constraints. A solid choice when clearance is limited.</p>
-          </div>
+          <img src="images/gutter-wedge-3in.jpg" alt="3 inch gutter wedge" />
+          <div class="wedge-body"><h3>3&quot; Wedge</h3><p>Compact lift for tighter runs and soffit constraints. A solid choice when clearance is limited.</p></div>
         </div>
-
         <div class="wedge-card">
-          <img src="images/gutter-wedge-3-5in.jpg" alt="3.5 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>3.5&quot; Wedge</h3>
-            <p>Balanced height for common installations. Keeps a clean line while improving water flow angle.</p>
-          </div>
+          <img src="images/gutter-wedge-3-5in.jpg" alt="3.5 inch gutter wedge" />
+          <div class="wedge-body"><h3>3.5&quot; Wedge</h3><p>Balanced height for common installations. Keeps a clean line while improving water flow angle.</p></div>
         </div>
-
         <div class="wedge-card">
-          <img src="images/gutter-wedge-4in.jpg" alt="4 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Wedge</h3>
-            <p>Standard option when extra clearance is needed. Helps maintain pitch on longer runs.</p>
-          </div>
+          <img src="images/gutter-wedge-4in.jpg" alt="4 inch gutter wedge" />
+          <div class="wedge-body"><h3>4&quot; Wedge</h3><p>Standard option when extra clearance is needed. Helps maintain pitch on longer runs.</p></div>
         </div>
-
         <div class="wedge-card">
-          <img src="images/gutter-wedge-4in-22deg.jpg" alt="4 inch 22.5 degree gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Wedge — 22.5°</h3>
-            <p>Angled variant for transitions and specialty tie-ins where a fixed degree improves alignment.</p>
-          </div>
+          <img src="images/gutter-wedge-4in-22deg.jpg" alt="4 inch 22.5 degree gutter wedge" />
+          <div class="wedge-body"><h3>4&quot; Wedge — 22.5°</h3><p>Angled variant for transitions and specialty tie-ins where a fixed degree improves alignment.</p></div>
         </div>
-
         <div class="wedge-card">
-          <img src="images/gutter-wedge-4in-bracket-5-5radius.jpg" alt="4 inch gutter bracket with 5.5 inch radius" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4&quot; Bracket (5.5&quot; Radius)</h3>
-            <p>Curved support for radius sections. Adds stability without compromising the contour.</p>
-          </div>
+          <img src="images/gutter-wedge-4in-bracket-5-5radius.jpg" alt="4 inch gutter bracket with 5.5 inch radius" />
+          <div class="wedge-body"><h3>4&quot; Bracket (5.5&quot; Radius)</h3><p>Curved support for radius sections. Adds stability without compromising the contour.</p></div>
         </div>
-
         <div class="wedge-card">
-          <img src="images/gutter-wedge-4-5in.jpg" alt="4.5 inch gutter wedge" loading="lazy" decoding="async" />
-          <div class="wedge-body">
-            <h3>4.5&quot; Wedge</h3>
-            <p>Extra lift for challenging pitches or uneven fascia. Useful where added angle is essential.</p>
-          </div>
+          <img src="images/gutter-wedge-4-5in.jpg" alt="4.5 inch gutter wedge" />
+          <div class="wedge-body"><h3>4.5&quot; Wedge</h3><p>Extra lift for challenging pitches or uneven fascia. Useful where added angle is essential.</p></div>
         </div>
       </div>
-
       <p class="legal">Manufactured exclusively for Ascension Gutters &amp; More, LLC under a commercial license. <em>Unauthorized reproduction prohibited.</em></p>
       <div class="cta-row">
         <a class="button primary" href="contact.html">Request This Project</a>
-        <a class="button ghost" href="services.html" style="margin-left:.5rem;">See More Services</a>
+        <a class="button ghost" href="services.html">See More Services</a>
       </div>
     </section>
 
@@ -226,16 +195,40 @@
     <section class="section">
       <h3>Project Gallery</h3>
       <div class="project-gallery-grid">
-        <img src="images/gutter-wedge-1.jpg" alt="Gutter wedge closeup" loading="lazy" decoding="async" />
-        <img src="images/gutter-wedge-2.jpg" alt="Set of gutter wedges in multiple sizes" loading="lazy" decoding="async" />
-        <img src="images/gutter-wedge-3.jpg" alt="Installed gutter wedge example" loading="lazy" decoding="async" />
+        <img src="images/gutter-wedge-1.jpg" alt="Gutter wedge closeup" />
+        <img src="images/gutter-wedge-2.jpg" alt="Set of gutter wedges in multiple sizes" />
+        <img src="images/gutter-wedge-3.jpg" alt="Installed gutter wedge example" />
       </div>
       <p style="color:#666; margin-top:.5rem;">Swap these placeholders with your own photos anytime.</p>
     </section>
   </main>
 
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Zoomed image" />
+  </div>
+
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
+
+  <!-- JS for Lightbox -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.wedge-card img, .project-gallery-grid img')
+      .forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+  </script>
 </body>
 </html>
