@@ -13,15 +13,16 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Custom Gutter Wedges – BnJ 3D Creations" />
-  <meta property="og:description" content="Precision gutter wedges manufactured exclusively for Ascension Gutters & More, LLC. Sizes: 3\", 3.5\", 4\", 4\" 22.5°, 4\" bracket w/5.5\" radius, 4.5\"." />
+  <meta property="og:description" content="Precision gutter wedges manufactured exclusively for Ascension Gutters & More, LLC. Sizes: 3&quot;, 3.5&quot;, 4&quot;, 4&quot; 22.5°, 4&quot; bracket w/5.5&quot; radius, 4.5&quot;." />
   <meta property="og:url" content="https://www.bnj3d-creations.com/gutter-wedges" />
   <meta property="og:image" content="https://www.bnj3d-creations.com/images/gutter-wedge-hero.jpg" />
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Page-specific minimal CSS -->
+  <!-- Page-specific CSS (includes hover-zoom) -->
   <style>
+    /* Hero */
     .hero {
       position: relative;
       display: grid;
@@ -36,6 +37,7 @@
     .hero h2 { font-size: clamp(1.75rem, 2.5vw, 2.25rem); margin: 0 0 .5rem; }
     .hero p { max-width: 800px; margin: 0 auto 1rem; }
 
+    /* Layout helpers */
     .section { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
     .callout {
       background: #faf7ff;
@@ -45,6 +47,7 @@
       color: #4b2ca3;
     }
 
+    /* Grid of wedge cards */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -55,7 +58,7 @@
       background: #fff;
       border: 1px solid #e6e6e6;
       border-radius: 12px;
-      overflow: hidden;
+      overflow: hidden;             /* keeps zoomed image clipped */
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
@@ -64,25 +67,58 @@
       display: block;
       width: 100%;
       height: auto;
+      transform-origin: center center;
+      transition: transform .25s ease, box-shadow .25s ease;
+      will-change: transform;
     }
-    .wedge-body {
-      padding: 0.9rem 1rem 1rem;
+    /* Zoom on the whole card (easier to hit target, image stays clipped) */
+    .wedge-card:hover img {
+      transform: scale(1.06);
     }
-    .wedge-body h3 {
-      margin: 0 0 .35rem;
-      color: #5a2ca0;
-      font-size: 1.1rem;
-    }
-    .wedge-body p {
-      margin: 0;
-      color: #444;
-      font-size: .96rem;
-      line-height: 1.4;
-    }
+    .wedge-body { padding: 0.9rem 1rem 1rem; }
+    .wedge-body h3 { margin: 0 0 .35rem; color: #5a2ca0; font-size: 1.1rem; }
+    .wedge-body p { margin: 0; color: #444; font-size: .96rem; line-height: 1.4; }
 
     .legal { font-size: .95rem; color: #555; margin-top: 1rem; }
     .cta-row { text-align: center; margin-top: 1.25rem; }
     .button.primary { display: inline-block; }
+
+    /* ---------- Hover zoom for the bottom Project Gallery ---------- */
+    /* scoped to this page via .wedges-page so other pages aren't affected */
+    .wedges-page .project-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .wedges-page .project-gallery-grid img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transform-origin: center center;
+      transition: transform .25s ease, box-shadow .25s ease;
+      will-change: transform;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .wedges-page .project-gallery-grid img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+      z-index: 1;
+    }
+
+    /* Respect accessibility + smaller screens */
+    @media (max-width: 640px) {
+      .wedge-card:hover img,
+      .wedges-page .project-gallery-grid img:hover { transform: scale(1.03); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .wedge-card img,
+      .wedges-page .project-gallery-grid img { transition: none !important; }
+    }
+
+    /* Opt-out utility for any image */
+    .no-zoom:hover { transform: none !important; box-shadow: none !important; }
   </style>
 </head>
 <body>
@@ -117,7 +153,8 @@
     </div>
   </section>
 
-  <main>
+  <!-- Note the page scope class here -->
+  <main class="wedges-page">
     <!-- Overview -->
     <section class="section">
       <div class="callout">
@@ -127,7 +164,7 @@
 
     <!-- Wedge Cards with Images + Descriptions -->
     <section class="section">
-      <h3>Available Sizes & Options</h3>
+      <h3>Available Sizes &amp; Options</h3>
       <div class="gallery-grid">
         <div class="wedge-card">
           <img src="images/gutter-wedge-3in.jpg" alt="3 inch gutter wedge" loading="lazy" decoding="async" />
@@ -185,10 +222,10 @@
       </div>
     </section>
 
-    <!-- Optional Gallery (leave or remove) -->
+    <!-- Project Gallery -->
     <section class="section">
       <h3>Project Gallery</h3>
-      <div class="gallery-grid">
+      <div class="project-gallery-grid">
         <img src="images/gutter-wedge-1.jpg" alt="Gutter wedge closeup" loading="lazy" decoding="async" />
         <img src="images/gutter-wedge-2.jpg" alt="Set of gutter wedges in multiple sizes" loading="lazy" decoding="async" />
         <img src="images/gutter-wedge-3.jpg" alt="Installed gutter wedge example" loading="lazy" decoding="async" />
