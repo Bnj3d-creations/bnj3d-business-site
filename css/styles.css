@@ -303,3 +303,38 @@ footer {
 @media (min-width: 900px){
   .gallery-grid img{ height: 280px; }
 }
+/* --- Hover zoom for the Gutter Wedges page --- */
+/* Cards row (sizes & options) */
+.cards-grid img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+.cards-grid img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  z-index: 1;
+}
+
+/* Project Gallery row */
+.gallery-grid img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+.gallery-grid img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  z-index: 1;
+}
+
+/* Keep layout steady on small screens */
+@media (max-width: 640px) {
+  .cards-grid img:hover,
+  .gallery-grid img:hover {
+    transform: scale(1.03);
+  }
+}
+
+/* If you ever want to opt-out an image, add class="no-zoom" */
+.no-zoom:hover { transform: none !important; box-shadow: none !important; }
