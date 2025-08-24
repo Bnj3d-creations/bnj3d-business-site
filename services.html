@@ -24,9 +24,8 @@
   <meta name="twitter:image" content="https://www.bnj3d-creations.com/images/bnj-logo.png" />
 
   <style>
-    /* --- Layout + cards --- */
     .services-box {
-      max-width: 1000px;           /* wider so the video can breathe */
+      max-width: 800px;
       margin: 2rem auto;
       padding: 2rem;
       background: #fff;
@@ -38,64 +37,28 @@
       color: #5a2ca0;
       margin-bottom: 2rem;
     }
-    .services-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      margin: 0; /* grid handles gaps */
-      padding: 1rem 1rem 1.25rem;
-      background: #f8f7fb;
-      border-radius: 10px;
-    }
+    .service-card { margin-bottom: 1.5rem; }
     .service-card h3 {
-      margin: 0 0 .25rem;
+      margin-bottom: 0.25rem;
       font-size: 1.25rem;
       color: #333;
     }
     .service-card h3 i { color: #5a2ca0; margin-right: 8px; }
     .service-card p { margin: 0; color: #444; }
 
-    /* Make the 3D Printing Services card span full row on tablet+ */
-    @media (min-width: 768px) {
-      .service-card--wide { grid-column: 1 / -1; }
-    }
-
-    /* Video fills the wider card nicely */
-    .service-card--wide video {
+    .service-card--wide { margin-top: 1.25rem; }
+    .service-video { margin-top: 1rem; }
+    .service-video video {
       width: 100%;
       height: auto;
-      max-height: none;
-      background: #000;
-      border-radius: 8px;
       display: block;
+      border-radius: 8px;
+      background: #000;
     }
 
-    .material-list {
-      padding-left: 1.25rem;
-      margin: 0.5rem 0 0;
-    }
+    .material-list { padding-left: 1.25rem; margin: 0.5rem 0 0; }
     .material-list li { margin-bottom: 0.5rem; color: #444; }
-
-    .cta-row {
-      margin-top: 1.75rem;
-      text-align: center;
-    }
-
-    /* FAQ visual separation */
-    .faq {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem 1.25rem;
-      background: #f9f9fb;
-      border-top: 1px solid #e7e3f3;
-      border-radius: 12px;
-    }
-    .faq h2 { text-align:center; margin:0 0 1rem; color:#5a2ca0; }
-    .faq-item { margin: 0 0 1rem; }
-    .faq-item h3 { margin: 0 0 .25rem; color:#333; }
-    .faq-item p { margin: 0; color:#444; }
+    .cta-row { margin-top: 1.75rem; text-align: center; }
   </style>
 
   <!-- Organization + Services schema -->
@@ -133,10 +96,10 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <a class="active" href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="shop.html">Shop</a>
     <a href="gutter-wedges.html">Gutter Wedges</a>
+    <a href="shop.html">Shop</a>
     <a href="contact.html">Contact</a>
   </nav>
 
@@ -158,13 +121,18 @@
           <p>Got a model that won’t slice or print correctly? I’ll fix it. Whether it’s holes, thin walls, or mesh errors, I can make it printable again.</p>
         </div>
 
-        <!-- 3D Printing Services (FULL-WIDTH CARD) -->
+        <!-- 3D Printing Services (FULL-WIDTH CARD WITH VIDEO) -->
         <div class="service-card service-card--wide">
           <h3><i class="fas fa-print" aria-hidden="true"></i>3D Printing Services</h3>
           <p>High-quality prints in a wide range of materials for prototypes, custom parts, gifts, and more. Single- or multi-color available.</p>
 
-          <div class="service-video" style="margin-top:1rem;">
-            <video controls preload="metadata" playsinline>
+          <div class="service-video">
+            <video
+              controls
+              preload="metadata"
+              playsinline
+              poster="images/video-poster-qidi.jpg"
+            >
               <source src="videos/qidi-demo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -199,34 +167,34 @@
         <a class="button ghost" href="https://www.facebook.com/profile.php?id=61578999821363" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
       </div>
     </section>
-
-    <!-- FAQ moved inside <main> and above footer -->
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <h3>What materials can you print in?</h3>
-        <p>We print in PLA, PETG, ABS, ASA, Nylon, TPU, and specialty carbon-fiber blends — perfect for both decorative and functional parts.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Can you do multi-color prints?</h3>
-        <p>Yes! With our AMS-equipped Bambu A1 printers and Qidi Plus 4, we can produce multi-color designs or mix materials for unique results.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Do you accept custom requests?</h3>
-        <p>Absolutely. We specialize in custom projects — from prototypes to decorative items — turning your idea into a reality.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>How long does a typical print take?</h3>
-        <p>It depends on size and complexity. Small prints may take a few hours, while larger or detailed designs may run overnight or longer.</p>
-      </div>
-    </section>
   </main>
 
-  <!-- FAQ schema -->
+  <!-- FAQ (kept for SEO + helpful info) -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>What materials can you print in?</h3>
+      <p>We print in PLA, PETG, ABS, ASA, Nylon, TPU, and specialty carbon-fiber blends — perfect for both decorative and functional parts.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can you do multi-color prints?</h3>
+      <p>Yes! With our AMS-equipped Bambu A1 printers and Qidi Plus 4, we can produce multi-color designs or mix materials for unique results.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you accept custom requests?</h3>
+      <p>Absolutely. We specialize in custom projects — from prototypes to decorative items — turning your idea into a reality.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How long does a typical print take?</h3>
+      <p>It depends on size and complexity. Small prints may take a few hours, while larger or detailed designs may run overnight or longer.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
