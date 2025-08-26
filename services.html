@@ -103,6 +103,121 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – BnJ 3D Creations</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.bnj3d-creations.com/services" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services – BnJ 3D Creations" />
+  <meta property="og:description" content="Custom 3D design & printing, file repair, and made-to-order parts in PLA, PETG, ASA, TPU, PETG-CF, and more." />
+  <meta property="og:url" content="https://www.bnj3d-creations.com/services" />
+  <meta property="og:image" content="https://www.bnj3d-creations.com/images/bnj-logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services – BnJ 3D Creations" />
+  <meta name="twitter:description" content="Custom 3D design & printing, file repair, and made-to-order parts in PLA, PETG, ASA, TPU, PETG-CF, and more." />
+  <meta name="twitter:image" content="https://www.bnj3d-creations.com/images/bnj-logo.png" />
+
+  <style>
+    .services-box {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .services-box h2 {
+      text-align: center;
+      color: #5a2ca0;
+      margin-bottom: 2rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .service-card {
+      background: #fdfdfd;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    .service-card h3 {
+      margin-top: 0;
+      color: #5a2ca0;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .service-card p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .cta-row {
+      margin-top: 1.75rem;
+      text-align: center;
+    }
+    .faq {
+      max-width: 900px;
+      margin: 4rem auto 2rem;
+      padding: 0 1rem;
+    }
+    .faq h2 {
+      color: #5a2ca0;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .faq-item {
+      margin-bottom: 1.25rem;
+    }
+    .faq-item h3 {
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .faq-item p {
+      margin: 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-flex">
+      <img src="images/bnj-logo.png" alt="BnJ 3D Logo" class="logo" />
+      <div>
+        <h1>BnJ 3D Creations</h1>
+        <p class="tagline">Making Your Ideas a Reality — in 3D</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="shop.html">Shop</a>
+    <a href="gutter-wedges.html">Gutter Wedges</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <main>
     <section class="services-box">
       <h2>What We Offer</h2>
@@ -110,56 +225,30 @@
         “We don’t just print — we bring your ideas to life, one layer at a time.”
       </p>
 
-      <div class="services-container">
+      <div class="service-grid">
         <div class="service-card">
-          <h3><i class="fas fa-cube" aria-hidden="true"></i>3D Model Design</h3>
-          <p>From sketches to reality — I’ll turn your idea into a print-ready model using precision CAD tools like Fusion 360.</p>
+          <h3>3D Model Design</h3>
+          <p>We turn your ideas into precise, print-ready CAD models using tools like Fusion 360. From napkin sketch to digital file — we’ve got you covered.</p>
         </div>
-
         <div class="service-card">
-          <h3><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>File Repair &amp; Model Cleanup</h3>
-          <p>Got a model that won’t slice or print correctly? I’ll fix it. Whether it’s holes, thin walls, or mesh errors, I can make it printable again.</p>
+          <h3>File Repair & Model Cleanup</h3>
+          <p>Have a broken STL file? We fix holes, wall thickness issues, and mesh errors so your file slices cleanly and prints without issues.</p>
         </div>
-
-        <!-- 3D Printing Services (FULL-WIDTH CARD WITH VIDEO) -->
-       <div class="service-card service-card--wide">
-  <h3><i class="fas fa-print" aria-hidden="true"></i>3D Printing Services</h3>
-  <p>High-quality prints in a wide range of materials for prototypes, custom parts, gifts, and more. Single- or multi-color available.</p>
-
-  <div class="service-video" style="margin-top:1rem;">
-    <video
-      controls
-      preload="metadata"
-      playsinline
-      style="width:100%;height:auto;border-radius:8px;background:#000"
-    >
-      <source src="videos/qidi-demo.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <p style="font-size:.9rem;color:#666;text-align:center;margin-top:.5rem;">
-      QIDI Plus 4 printer in action — bringing a design to life one layer at a time.
-    </p>
-  </div>
-</div>
-        </div>
-
         <div class="service-card">
-          <h3><i class="fas fa-palette" aria-hidden="true"></i>Material Options</h3>
-          <ul class="material-list">
-            <li><strong>PLA</strong> — Affordable and easy to print. Great for prototypes and indoor use.</li>
-            <li><strong>PETG</strong> — Strong, slightly flexible, UV/weather resistant. Ideal for outdoor projects.</li>
-            <li><strong>PETG-CF</strong> — PETG blended with carbon fiber for increased strength and stiffness. Excellent for functional parts.</li>
-            <li><strong>ABS</strong> — Durable and impact-resistant. Suitable for engineered parts; needs enclosure to avoid warping.</li>
-            <li><strong>ASA</strong> — UV and weather-resistant alternative to ABS. Great for outdoor parts.</li>
-            <li><strong>PET</strong> — Similar to PETG with different print characteristics; good chemical resistance.</li>
-            <li><strong>Nylon</strong> — Strong, flexible, and wear-resistant. Best for mechanical components and hinges.</li>
-            <li><strong>TPU (95A &amp; 98A)</strong> — Flexible, rubber-like. Great for gaskets, keychains, and shock-absorbing parts.</li>
-          </ul>
+          <h3>3D Printing Services</h3>
+          <p>We print functional parts, gifts, prototypes, and custom solutions in a variety of materials and colors — including multi-color printing via AMS systems.</p>
         </div>
-
         <div class="service-card">
-          <h3><i class="fas fa-lightbulb" aria-hidden="true"></i>Special Projects</h3>
-          <p>Interior displays, large-format items-up to 305mm x 305mm x 280mm build volume, Croc charms, custom bird feeders, and engineering challenges — let’s build something unique.</p>
+          <h3>Material Options</h3>
+          <p>Choose from PLA, PETG, PETG-CF, ASA, ABS, TPU (95A & 98A), Nylon, and more — suitable for indoor and outdoor use, flexible or rigid parts.</p>
+        </div>
+        <div class="service-card">
+          <h3>Special Projects</h3>
+          <p>From branded fender badges and custom trailer hitch covers to coasters, holders, and outdoor bird feeders — we create durable, made-to-order solutions for practical, decorative, or display needs. Got something unique in mind? Let’s build something made to last.</p>
+        </div>
+        <div class="service-card">
+          <h3>Rapid Turnaround & Local Pickup</h3>
+          <p>Located in south Louisiana, we offer fast turnarounds and optional local pickup for quicker service without the shipping wait.</p>
         </div>
       </div>
 
@@ -168,74 +257,27 @@
         <a class="button ghost" href="https://www.facebook.com/profile.php?id=61578999821363" target="_blank" rel="noopener noreferrer">Message on Facebook</a>
       </div>
     </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What materials can you print in?</h3>
+        <p>We print in PLA, PETG, ABS, ASA, Nylon, TPU, and specialty carbon-fiber blends — perfect for both decorative and functional parts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you do multi-color prints?</h3>
+        <p>Yes! With our AMS-equipped Bambu A1 printers and Qidi Plus 4, we can produce multi-color designs or mix materials for unique results.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you accept custom requests?</h3>
+        <p>Absolutely. We specialize in custom projects — from prototypes to decorative items — turning your idea into a reality.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does a typical print take?</h3>
+        <p>It depends on size and complexity. Small prints may take a few hours, while larger or detailed designs may run overnight or longer.</p>
+      </div>
+    </section>
   </main>
-
-  <!-- FAQ (kept for SEO + helpful info) -->
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <h3>What materials can you print in?</h3>
-      <p>We print in PLA, PETG, ABS, ASA, Nylon, TPU, and specialty carbon-fiber blends — perfect for both decorative and functional parts.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Can you do multi-color prints?</h3>
-      <p>Yes! With our AMS-equipped Bambu A1 printers and Qidi Plus 4, we can produce multi-color designs or mix materials for unique results.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Do you accept custom requests?</h3>
-      <p>Absolutely. We specialize in custom projects — from prototypes to decorative items — turning your idea into a reality.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>How long does a typical print take?</h3>
-      <p>It depends on size and complexity. Small prints may take a few hours, while larger or detailed designs may run overnight or longer.</p>
-    </div>
-  </section>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What materials can you print in?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We print in PLA, PETG, ABS, ASA, Nylon, TPU, and carbon-fiber blends for both decorative and functional parts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you do multi-color prints?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our AMS-equipped Bambu A1 and Qidi Plus 4 printers allow multi-color and mixed-material designs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you accept custom requests?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we specialize in custom projects from prototypes to decorative items, turning your idea into a reality."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a typical print take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on the size and complexity of the job — small prints take hours, while larger ones may run overnight or longer."
-        }
-      }
-    ]
-  }
-  </script>
 
   <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
