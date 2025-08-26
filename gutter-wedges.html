@@ -179,7 +179,43 @@
     </section>
   </main>
 
-  <footer>
+  <style>
+  /* Simple image zoom (drop-in) */
+  .zoom-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:9999}
+  .zoom-overlay.open{display:flex}
+  .zoom-overlay img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+  .zoom-close{position:fixed;top:12px;right:16px;font-size:28px;color:#fff;background:none;border:0;cursor:pointer}
+  main img{cursor:zoom-in}
+</style>
+<script>
+  (function () {
+    // Make ALL images inside <main> zoomable—no class changes needed
+    var imgs = document.querySelectorAll('main img');
+    if (!imgs.length) return;
+
+    var ov = document.createElement('div');
+    ov.className = 'zoom-overlay';
+    ov.innerHTML = '<button class="zoom-close" aria-label="Close">×</button><img alt="">';
+    document.body.appendChild(ov);
+
+    var big = ov.querySelector('img');
+    var closeBtn = ov.querySelector('.zoom-close');
+
+    function openZoom(src, alt){ big.src = src; big.alt = alt || ''; ov.classList.add('open'); }
+    function closeZoom(){ ov.classList.remove('open'); big.src = ''; }
+
+    ov.addEventListener('click', function(e){ if (e.target === ov || e.target === closeBtn) closeZoom(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeZoom(); });
+
+    imgs.forEach(function(img){
+      img.addEventListener('click', function(){
+        var src = img.getAttribute('data-zoom-src') || img.src; // optional bigger image
+        openZoom(src, img.alt);
+      });
+    });
+  })();
+</script>
+    <footer>
     <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
   </footer>
 </body>
