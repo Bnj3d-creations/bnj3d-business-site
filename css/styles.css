@@ -354,6 +354,14 @@ footer {
   font-weight: bold;
   color: #000;
 }
+/* Keep product images proportional and not huge */
+.product-gallery img {
+  width: 100%;
+  max-width: 600px;   /* adjust up/down if you want larger/smaller */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 /* If you ever want to opt-out an image, add class="no-zoom" */
 .no-zoom:hover { transform: none !important; box-shadow: none !important; }
