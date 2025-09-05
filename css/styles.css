@@ -365,3 +365,33 @@ footer {
 
 /* If you ever want to opt-out an image, add class="no-zoom" */
 .no-zoom:hover { transform: none !important; box-shadow: none !important; }
+/* ===== Product detail layout: image LEFT, info RIGHT ===== */
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Image sizing (no stretching) */
+.product-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Optional: keep the text column tidy */
+.product-info {
+  max-width: 680px;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 900px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+  .product-info {
+    max-width: 720px;
+  }
+}
