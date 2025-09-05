@@ -206,3 +206,10 @@ footer {
 .service-card ul.material-list li {
   margin-bottom: 0.4rem;
 }
+.product-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional, just looks nice */
+  display: block;
+  margin: 0 auto;
+}
