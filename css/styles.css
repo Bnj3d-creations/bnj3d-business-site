@@ -407,3 +407,24 @@ footer {
     display: block;
   }
 }
+/* --- Tighter mobile nav spacing (overrides) --- */
+@media (max-width: 768px) {
+  nav.main-nav ul {
+    gap: 0;                 /* kill extra space between items */
+  }
+
+  nav a,
+  nav.main-nav a {
+    display: block;
+    padding: 6px 0;         /* tighter vertical padding */
+    line-height: 1.2;       /* compact line height */
+    margin: 0;              /* no extra margins */
+    width: 100%;
+    text-align: center;
+  }
+
+  nav.main-nav li {
+    margin: 0;
+    padding: 0;
+  }
+}
