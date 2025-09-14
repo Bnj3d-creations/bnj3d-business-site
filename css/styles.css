@@ -395,3 +395,15 @@ footer {
     max-width: 720px;
   }
 }
+/* Fix nav for small screens */
+@media (max-width: 768px) {
+  nav.main-nav ul {
+    flex-direction: column;   /* stack links vertically */
+    align-items: center;      /* center them */
+    gap: 10px;                /* space between items */
+  }
+
+  nav.main-nav li {
+    display: block;
+  }
+}
