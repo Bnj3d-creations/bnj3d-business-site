@@ -428,3 +428,8 @@ footer {
     padding: 0;
   }
 }
+.divider {
+  border-top: 2px solid #000;  /* dark black line */
+  width: 60%;                  /* adjust width as you prefer (same across all pages) */
+  margin: 20px auto;           /* keeps it centered */
+}
