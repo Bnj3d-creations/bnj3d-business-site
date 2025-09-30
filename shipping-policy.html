@@ -29,32 +29,34 @@
     /* Sections */
     .policy-section {
       margin: 26px auto 34px;
+      text-align: center; /* match other policy pages */
+      max-width: 800px;
     }
     .policy-section h3 {
-      text-align: center;
       margin: 0 0 10px;
     }
     .policy-section p,
     .policy-section ul {
-      color: #222;
       line-height: 1.6;
       font-size: 1rem;
+      margin: 0 auto 12px;
+      text-align: center; /* center body text */
       max-width: 720px;
-      margin: 0 auto;
-      text-align: left;
     }
     .policy-section ul {
-      list-style-position: outside;
-      padding-left: 1.1rem;
-      margin-top: 6px;
+      list-style: none;   /* remove bullets to keep centered look */
+      padding: 0;
+    }
+    .policy-section ul li {
+      margin: 6px 0;
     }
 
-    /* Divider style (now matches Returns page) */
+    /* Divider style (matches other pages) */
     .section-rule {
       border: 0;
-      border-top: 2px solid #000;  /* dark black line */
-      width: 50%;                  /* same length as Returns page */
-      margin: 24px auto;           /* centered with spacing */
+      border-top: 2px solid #000;
+      width: 50%;
+      margin: 24px auto;
       height: 0;
       background: none;
       opacity: 1;
@@ -74,9 +76,9 @@
     </div>
   </header>
 
-  <!-- Gold Nav Bar -->
+  <!-- Gold Nav Bar (centered, consistent) -->
   <nav class="main-nav">
-    <ul>
+    <ul style="list-style:none;padding:0;margin:0;display:flex;justify-content:center;gap:20px;">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
@@ -158,7 +160,7 @@
     </section>
   </main>
 
-    <footer>
+  <footer>
     <div style="text-align:center; padding:20px; background:#f9f9f9; margin-top:40px;">
       <p>
         <a href="shipping-policy.html">Shipping Policy</a> | 
