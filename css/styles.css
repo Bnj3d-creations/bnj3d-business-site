@@ -438,9 +438,11 @@ footer {
   position: relative;
   overflow: hidden;
   max-height: 600px;
-  margin-bottom: 2rem;
+  margin: 0.75rem auto 2.5rem auto;  /* small space under nav + centered */
+  max-width: 1200px;                 /* keeps it same width as main content */
+  border-radius: 0 0 12px 12px;      /* soft bottom corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18); /* gentle drop shadow */
 }
-
 .hero-banner img {
   width: 100%;
   display: block;
