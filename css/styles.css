@@ -482,12 +482,9 @@ footer {
 
 /* Featured fidget layout */
 .product-section {
-  padding: 2.5rem 1.5rem;
-}
-
-.product-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .product-layout {
@@ -536,4 +533,22 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+/* Video section styling */
+.video-section {
+  text-align: center;
+  margin: 2.5rem auto;
+  padding: 1rem;
+  max-width: 900px;
+}
+
+.video-section h2 {
+  margin-bottom: 1rem;
+}
+
+.fidget-video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
