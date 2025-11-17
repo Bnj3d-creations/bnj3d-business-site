@@ -107,6 +107,26 @@
       <p>&copy; 2025 BnJ 3D Creations. All rights reserved.</p>
     </div>
   </footer>
+ <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const product = params.get('product');
+      if (!product) return;
+
+      const msg = document.getElementById('message');
+      if (!msg || msg.value) return;
+
+      msg.value =
+        "I'd like to order the following item from your shop:\n\n" +
+        "Product: " + product + "\n" +
+        "Quantity: ____\n\n" +
+        "Preferred colors or details:\n" +
+        "____________________________________\n\n" +
+        "Additional notes:\n";
+    })();
+  </script>
+</body>
+</html>
 </body>
 </html>
 
