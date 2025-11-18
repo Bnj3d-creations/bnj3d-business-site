@@ -574,3 +574,24 @@ footer {
     padding: 1.5rem 1rem;
   }
 }
+/* === MOBILE FIX — Prevent horizontal shifting on Samsung/iPhone === */
+@media (max-width: 600px) {
+
+  body {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    /* Remove desktop “boxed layout” for phone screens */
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Optional: tighten content spacing for nicer mobile fit */
+  main.container,
+  section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
