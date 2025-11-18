@@ -286,7 +286,7 @@ footer {
 .product-price {
   font-weight: 700;
   color: #5a2ca0;
-  font-size: 1.12em;   /* slightly larger so prices pop */
+  font-size: 1.12em;
   margin: .25rem 0 1rem;
 }
 
@@ -311,6 +311,7 @@ footer {
   max-height: none;
 }
 
+/* Override product card ratio to square where needed */
 .product-card img {
   width: 100%;
   height: auto;
@@ -329,8 +330,8 @@ footer {
 
 .gallery-grid img {
   width: 100%;
-  height: 240px;           /* keeps a consistent tile height */
-  object-fit: cover;       /* crops edges instead of squishing */
+  height: 240px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 1px 8px rgba(0,0,0,.08);
 }
@@ -341,7 +342,6 @@ footer {
 }
 
 /* --- Hover zoom for the Gutter Wedges page --- */
-/* Cards row (sizes & options) */
 .cards-grid img {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   transform-origin: center center;
@@ -353,7 +353,6 @@ footer {
   z-index: 1;
 }
 
-/* Project Gallery row */
 .gallery-grid img {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   transform-origin: center center;
@@ -373,7 +372,7 @@ footer {
   }
 }
 
-/* Fix nav bar list styling */
+/* Fix nav bar list styling (base desktop) */
 .main-nav ul {
   list-style: none;
   padding: 0;
@@ -396,7 +395,7 @@ footer {
 /* Keep product images proportional and not huge */
 .product-gallery img {
   width: 100%;
-  max-width: 600px;   /* adjust up/down if you want larger/smaller */
+  max-width: 600px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -429,7 +428,7 @@ footer {
   max-width: 680px;
 }
 
-/* Mobile: stack vertically */
+/* Mobile: stack vertically (already covered above but keep for clarity) */
 @media (max-width: 900px) {
   .product-detail {
     grid-template-columns: 1fr;
@@ -439,23 +438,10 @@ footer {
   }
 }
 
-/* Fix nav for small screens (structure) */
-@media (max-width: 768px) {
-  nav.main-nav ul {
-    flex-direction: column;   /* stack links vertically */
-    align-items: center;      /* center them */
-    gap: 10px;                /* space between items */
-  }
-
-  nav.main-nav li {
-    display: block;
-  }
-}
-
 .divider {
-  border-top: 2px solid #000;  /* dark black line */
-  width: 60%;                  /* adjust width as you prefer (same across all pages) */
-  margin: 20px auto;           /* keeps it centered */
+  border-top: 2px solid #000;
+  width: 60%;
+  margin: 20px auto;
 }
 
 /* Hero banner for silk fidget */
@@ -463,10 +449,10 @@ footer {
   position: relative;
   overflow: hidden;
   max-height: 600px;
-  margin: 0.75rem auto 2.5rem auto;  /* small space under nav + centered */
-  max-width: 1200px;                 /* keeps it same width as main content */
-  border-radius: 0 0 12px 12px;      /* soft bottom corners */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18); /* gentle drop shadow */
+  margin: 0.75rem auto 2.5rem auto;
+  max-width: 1200px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
 }
 .hero-banner img {
   width: 100%;
@@ -565,13 +551,6 @@ footer {
   text-align: center;
   margin: 2.5rem auto;
   padding: 1rem;
-  max-width: 1100px;
-}
-
-.video-section {
-  text-align: center;
-  margin: 2.5rem auto;
-  padding: 1rem;
   max-width: 900px;
 }
 
@@ -586,10 +565,10 @@ footer {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* === MOBILE LAYOUT (phones up to ~900px wide) === */
+/* === MOBILE LAYOUT (phones & small tablets up to ~900px) === */
 @media (max-width: 900px) {
 
-  /* Body: no boxed layout on phones */
+  /* Body: remove boxed layout on mobiles */
   html,
   body {
     width: 100%;
@@ -599,7 +578,7 @@ footer {
     border-left: none;
     border-right: none;
     box-shadow: none;
-    overflow-x: hidden; /* stop any sideways scroll */
+    overflow-x: hidden;
   }
 
   /* General spacing */
