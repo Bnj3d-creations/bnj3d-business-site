@@ -595,3 +595,28 @@ footer {
     padding-right: 1rem !important;
   }
 }
+/* === Fix yellow mobile menu alignment === */
+@media (max-width: 600px) {
+
+  nav.main-nav,
+  nav {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  nav.main-nav ul,
+  nav ul {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  nav.main-nav li,
+  nav li {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
