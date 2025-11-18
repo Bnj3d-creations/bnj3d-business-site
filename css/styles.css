@@ -1,6 +1,5 @@
 /* styles.css */
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -94,75 +93,6 @@ footer {
   border-radius: 16px 16px 0 0;
 }
 
-/* === Mobile Optimizations === */
-@media (max-width: 600px) {
-  body {
-    padding: 0 1rem;
-  }
-
-  header img {
-    width: 60px;
-    height: auto;
-  }
-
-  .form-wrapper {
-    padding: 1rem;
-    margin: 1rem auto;
-  }
-
-  input,
-  textarea {
-    padding: 0.75rem;
-    font-size: 1rem;
-  }
-
-  button,
-  input[type="submit"] {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    display: block;
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-size: 1.3em;
-  }
-}
-@media (max-width: 600px) {
-  .header-flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header-flex h1 {
-  font-size: 2rem;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
-  display: inline-block;
-  max-width: 100%;
-}
-
-  .logo {
-    max-width: 100px;         /* Resize logo slightly on mobile */
-    margin-bottom: 10px;
-  }
-}
 /* === Services Section Card Layout === */
 .services-container {
   display: grid;
@@ -206,15 +136,41 @@ footer {
 .service-card ul.material-list li {
   margin-bottom: 0.4rem;
 }
+
 /* --- Shop / product styles --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
-.shop-hero { text-align: center; margin-bottom: 1rem; }
-.shop-hero h2 { margin: 0 0 .25rem; }
+.shop-hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.shop-hero h2 {
+  margin: 0 0 .25rem;
+}
 
-.shop-filters { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin: .75rem 0 1.25rem; }
-.chip { border: 1px solid #ddd; background: #fff; padding: .4rem .75rem; border-radius: 999px; cursor: pointer; }
-.chip.active { background: #5a2ca0; color: #fff; border-color: transparent; }
+.shop-filters {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: .75rem 0 1.25rem;
+}
+.chip {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: .4rem .75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.chip.active {
+  background: #5a2ca0;
+  color: #fff;
+  border-color: transparent;
+}
 
 .product-grid {
   display: grid;
@@ -222,34 +178,109 @@ footer {
   gap: 1rem;
 }
 
-.product-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: transform .15s ease; }
-.product-card:hover { transform: translateY(-2px); }
-.product-card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
-.product-link { text-decoration: none; color: inherit; }
-.product-body { padding: .9rem; }
-.product-body h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
-.product-foot { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; }
-.price { font-weight: 700; color: #5a2ca0; }
-.cta { font-weight: 600; font-size: .9rem; }
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .15s ease;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+}
+.product-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+.product-body {
+  padding: .9rem;
+}
+.product-body h3 {
+  margin: 0 0 .25rem;
+  font-size: 1.05rem;
+}
+.product-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .5rem;
+}
+.price {
+  font-weight: 700;
+  color: #5a2ca0;
+}
+.cta {
+  font-weight: 600;
+  font-size: .9rem;
+}
 
-.note-shipping { text-align: center; color: #666; margin-top: 1rem; }
+.note-shipping {
+  text-align: center;
+  color: #666;
+  margin-top: 1rem;
+}
 
 /* Product page layout */
-.product-page .backlink { display: inline-block; margin: .25rem 0 1rem; text-decoration: none; }
-.product-detail { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: start; }
-.product-gallery img { width: 100%; border-radius: 12px; margin-bottom: .75rem; border: 1px solid #eee; }
-.product-info h2 { margin-top: 0; }
-.product-price { font-weight: 700; color: #5a2ca0; margin: .25rem 0 1rem; }
-.bullet { padding-left: 1.1rem; }
-.bullet li { margin: .25rem 0; }
+.product-page .backlink {
+  display: inline-block;
+  margin: .25rem 0 1rem;
+  text-decoration: none;
+}
+.product-detail {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 2rem;
+  align-items: start;
+}
+.product-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: .75rem;
+  border: 1px solid #eee;
+}
+.product-info h2 {
+  margin-top: 0;
+}
+.product-price {
+  font-weight: 700;
+  color: #5a2ca0;
+  margin: .25rem 0 1rem;
+}
+.bullet {
+  padding-left: 1.1rem;
+}
+.bullet li {
+  margin: .25rem 0;
+}
 
-.button { display: inline-block; padding: .65rem 1rem; border-radius: 10px; text-decoration: none; }
-.button.primary { background: #5a2ca0; color: #fff; }
-.button.ghost { border: 1px solid #ccc; color: #333; background: #fff; }
+.button {
+  display: inline-block;
+  padding: .65rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.button.primary {
+  background: #5a2ca0;
+  color: #fff;
+}
+.button.ghost {
+  border: 1px solid #ccc;
+  color: #333;
+  background: #fff;
+}
 
 @media (max-width: 900px) {
-  .product-detail { grid-template-columns: 1fr; }
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
 }
+
 /* === Unified price styling (overrides earlier rules) === */
 .price,
 .product-price {
@@ -258,6 +289,7 @@ footer {
   font-size: 1.12em;   /* slightly larger so prices pop */
   margin: .25rem 0 1rem;
 }
+
 /* Ensure services lay out in a responsive grid */
 .services-container {
   display: grid;
@@ -278,6 +310,7 @@ footer {
   height: auto;
   max-height: none;
 }
+
 .product-card img {
   width: 100%;
   height: auto;
@@ -285,24 +318,28 @@ footer {
   aspect-ratio: 1 / 1;
   display: block;
 }
+
 /* --- Gutter wedges: bottom gallery sizing --- */
-.gallery-grid{
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   align-items: start;
 }
 
-.gallery-grid img{
+.gallery-grid img {
   width: 100%;
   height: 240px;           /* keeps a consistent tile height */
   object-fit: cover;       /* crops edges instead of squishing */
   border-radius: 8px;
   box-shadow: 0 1px 8px rgba(0,0,0,.08);
 }
-@media (min-width: 900px){
-  .gallery-grid img{ height: 280px; }
+@media (min-width: 900px) {
+  .gallery-grid img {
+    height: 280px;
+  }
 }
+
 /* --- Hover zoom for the Gutter Wedges page --- */
 /* Cards row (sizes & options) */
 .cards-grid img {
@@ -335,6 +372,7 @@ footer {
     transform: scale(1.03);
   }
 }
+
 /* Fix nav bar list styling */
 .main-nav ul {
   list-style: none;
@@ -354,6 +392,7 @@ footer {
   font-weight: bold;
   color: #000;
 }
+
 /* Keep product images proportional and not huge */
 .product-gallery img {
   width: 100%;
@@ -364,7 +403,11 @@ footer {
 }
 
 /* If you ever want to opt-out an image, add class="no-zoom" */
-.no-zoom:hover { transform: none !important; box-shadow: none !important; }
+.no-zoom:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* ===== Product detail layout: image LEFT, info RIGHT ===== */
 .product-detail {
   display: grid;
@@ -395,7 +438,8 @@ footer {
     max-width: 720px;
   }
 }
-/* Fix nav for small screens */
+
+/* Fix nav for small screens (structure) */
 @media (max-width: 768px) {
   nav.main-nav ul {
     flex-direction: column;   /* stack links vertically */
@@ -407,32 +451,13 @@ footer {
     display: block;
   }
 }
-/* --- Tighter mobile nav spacing (overrides) --- */
-@media (max-width: 768px) {
-  nav.main-nav ul {
-    gap: 0;                 /* kill extra space between items */
-  }
 
-  nav a,
-  nav.main-nav a {
-    display: block;
-    padding: 6px 0;         /* tighter vertical padding */
-    line-height: 1.2;       /* compact line height */
-    margin: 0;              /* no extra margins */
-    width: 100%;
-    text-align: center;
-  }
-
-  nav.main-nav li {
-    margin: 0;
-    padding: 0;
-  }
-}
 .divider {
   border-top: 2px solid #000;  /* dark black line */
   width: 60%;                  /* adjust width as you prefer (same across all pages) */
   margin: 20px auto;           /* keeps it centered */
 }
+
 /* Hero banner for silk fidget */
 .hero-banner {
   position: relative;
@@ -515,7 +540,7 @@ footer {
   font-style: italic;
 }
 
-/* Mobile tweak */
+/* Mobile tweak for hero & product layout */
 @media (max-width: 700px) {
   .hero-banner-text {
     left: 5%;
@@ -534,6 +559,7 @@ footer {
     align-items: center;
   }
 }
+
 /* Video section styling */
 .video-section {
   text-align: center;
@@ -559,64 +585,128 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
-/* === Fix mobile centering (Samsung / iPhone) === */
+
+/* === MOBILE LAYOUT (phones up to ~600px wide) === */
 @media (max-width: 600px) {
+
+  /* Body: no boxed layout on phones */
+  html,
   body {
+    width: 100%;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
     border-left: none;
     border-right: none;
     box-shadow: none;
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; /* stop any sideways scroll */
   }
 
-  section {
-    padding: 1.5rem 1rem;
-  }
-}
-/* === MOBILE FIX — Prevent horizontal shifting on Samsung/iPhone === */
-@media (max-width: 600px) {
-
-  body {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
-    /* Remove desktop “boxed layout” for phone screens */
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Optional: tighten content spacing for nicer mobile fit */
+  /* General spacing */
+  main,
   main.container,
+  section,
+  .gallery {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   section {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-/* === Fix yellow mobile menu alignment === */
-@media (max-width: 600px) {
-
-  nav.main-nav,
-  nav {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
-  nav.main-nav ul,
-  nav ul {
-    padding: 0 !important;
-    margin: 0 auto !important;
-    width: 100% !important;
-    justify-content: center !important;
+  /* Header logo/text stack nicely */
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  nav.main-nav li,
-  nav li {
-    width: 100% !important;
-    text-align: center !important;
+  header img,
+  .logo {
+    width: 60px;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.3em;
+  }
+
+  /* Forms */
+  .form-wrapper {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  input,
+  textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  button,
+  input[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  /* Yellow nav bar full width & centered */
+  nav,
+  nav.main-nav {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0 0 16px 16px;
+  }
+
+  nav ul,
+  nav.main-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav li,
+  nav.main-nav li {
+    width: 100%;
+  }
+
+  nav a,
+  nav.main-nav a {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    margin: 0;
+  }
+
+  /* Portfolio & shop cards: full width, centered */
+  .gallery,
+  .product-grid,
+  .project-card,
+  .product-card {
+    width: 100%;
   }
 }
